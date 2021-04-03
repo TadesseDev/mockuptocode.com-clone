@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
     <link rel="stylesheet" href="fonts/fonts.css">
-    <title>jumbotrons</title>
+    <title>copy homepage</title>
     <style>
         .navbarw {
-            display: flex;
+            display: inline-flex;
             width: 100%;
             height: 70px;
             position: sticky;
@@ -18,7 +18,7 @@
             padding: 0px;
             margin: 0px;
         }
-
+        
         .brandw {
             display: flex;
             min-height: 100%;
@@ -32,19 +32,21 @@
             line-height: 35px;
             padding: 21px 5px;
         }
-
+        
         .brandw a {
             color: white;
             text-decoration: none;
         }
-
+        
         .fill-avail a {
             text-decoration: none;
         }
-        .fill-avail a:hover{
-            color: #2d6099;;
+        
+        .fill-avail a:hover {
+            color: #2d6099;
+            ;
         }
-
+        
         .menuw {
             display: flex;
             width: 500px;
@@ -54,7 +56,7 @@
             height: 100%;
             justify-self: end;
         }
-
+        
         .menuw li a {
             cursor: pointer;
             font-size: 16px;
@@ -63,18 +65,18 @@
             font-weight: bold;
             color: #373737;
         }
-
+        
         ul {
             list-style: none;
             padding-inline-start: 0px;
         }
-
+        
         .fill-avail {
             display: flex;
             width: -webkit-fill-available;
             justify-content: flex-end;
         }
-
+        
         .phoneN {
             display: flex;
             background: #ffa4a4;
@@ -87,7 +89,7 @@
             color: #ffffff;
             font-size: 20px;
         }
-
+        
         .getA {
             display: flex;
             justify-content: center;
@@ -100,6 +102,24 @@
             color: #ffffff;
             font-size: 20px;
         }
+        
+        .togglerw {
+            display: inline-block;
+            width: 60px;
+            align-self: center;
+        }
+        
+        .togglerw img {
+            width: 100%;
+        }
+        
+        @media (max-width: 1150px) {
+            .fill-avail {
+                width: 0px;
+                height: 0px;
+                overflow: hidden;
+            }
+        }
     </style>
 </head>
 
@@ -108,7 +128,10 @@
         <div class="brandw">
             <a href="#"> MockupToCode</a>
         </div>
-        <div class="fill-avail">
+        <div class="togglerw">
+            <img src="image/app-hamburger-lines-menu-more-navigation-website-icon-website-navigation-icons-png-512_512.png" alt="toggle-menu">
+        </div>
+        <!-- <div class="fill-avail">
             <ul class="menuw">
                 <li>
                     <a href=""> Home </a>
@@ -126,13 +149,13 @@
                     <a href=""> contact </a>
                 </li>
             </ul>
-        </div>
-        <div class="phoneN">
-            <span>+257921577930</span>
-        </div>
-        <div class="getA">
-            get a quote
-        </div>
+            <div class="phoneN">
+                <span>+257921577930</span>
+            </div>
+            <div class="getA">
+                get a quote
+            </div>
+        </div> -->
     </div>
     <div class="container-fluid">
 
