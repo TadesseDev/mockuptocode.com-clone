@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <style>
+        .navbar {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .navbar-nav li {
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            background-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+            padding: 0px 10px;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            background-color: #2d6099;
+            height: 105px;
+            width: 410px;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+            font-size: 38px;
+        }
+        
+        .navbar-brand a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: kiwi-m;
+            font-weight: bold;
+        }
+        /* .navbar-nav {
+            background-color: white;
+        }
+        
+        .navbar-nav a {
+            color: black;
+        }
+         */
+        
+        .nav-link:active {
+            color: #0d57aa;
+        }
+        
+        .left-cont {
+            height: 105px;
+            width: 530px;
+        }
+        
+        .show .left-cont {
+            width: 100%;
+        }
+        
+        .cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            float: left;
+        }
+        
+        .left-cont .cont:nth-child(1),
+        .left-cont .cont:nth-child(2) {
+            background-color: #ffa4a4;
+            color: white;
+            font-family: "kiwi-r";
+            font-weight: 900;
+            font-size: 20px;
+        }
+        
+        .left-cont .cont:nth-child(2) {
+            background-color: #2d6099;
+        }
+        
+        .navbar-brand a:hover {
+            color: white;
+        }
+        
+        .navbra-nav .nav-item .nav-link {}
+        
+        a {
+            color: rgb(63, 62, 62);
+        }
+        
+        .active {
+            color: #0078e0;
+        }
+        
+        .icon {
+            width: 28px;
+            transform: rotate(270deg);
+            margin-right: 5px;
+            margin-bottom: 2px;
+        }
+        
+        .left-cont .cont:nth-child(2) .icon {
+            transform: rotate(0deg);
+            margin-right: 20px;
+            margin-bottom: 0px;
+        }
+        
+        .menu {
+            width: 40px;
+        }
+        
+        .navbar-toggler-icon {
+            color: lightyellow;
+        }
+        
+        .show .navbar-nav li {
+            margin: 30px 0px;
+        }
+        
+        .show ul {
+            padding-left: 50px;
+        }
+        
+        .show .left-cont .cont {}
+        
+        @media (max-width: 1599px) {
+            .navbar {
+                background-color: #2d6099;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl">
+        <div class="navbar-brand">
+            <a href="#" class="">MockupToCode</a>
+        </div>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#hide-and-show-menu">
+            <span><img class="menu" src="icons/Menu_104px.png" alt=""></span>
+        </button>
+        <div class="collapse navbar-collapse bg-light" id="hide-and-show-menu">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item ">
+                    <a href="#" class="nav-link active">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">WORK</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">WORK</a>
+                </li>
+            </ul>
+            <div class="left-cont">
+                <div class="cont"> <span><img class="icon" src="icons/Phone_50px.png" alt="phone icon"></span><span class="bi bi-telephone-outbound-fill"></span><span class="phoneN"> +251921577930 </span></div>
+                <div class="cont"><span><img class="icon" src="icons/Quote_52px.png" alt="phone icon"></span><span class="getQ"> get a Quote </span></div>
+            </div>
+        </div>
+    </nav>
+    <script src="JQuery-3.6.0/jquery-3.6.0.js"></script>
+    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.js"></script>
+    <script>
+        $(".navbar-toggler").on("click", function() {
+            var id_to_show = $(this).attr("data-target");
+            if ($(id_to_show).hasClass("show")) {
+                $(id_to_show).removeClass("show");
+            } else {
+                $(id_to_show).addClass("show");
+            }
+        });
+    </script>
+</body>
+
+</html>
