@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: "brand-font-normal";
+    src: url("RobotoMono-VariableFont_wght.ttf");
+}
+
+@font-face {
     font-family: "kiwi-r";
     src: url("KiwiMaru-Light.ttf");
 }

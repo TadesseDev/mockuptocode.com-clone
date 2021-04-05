@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="fonts/fonts.css">
     <style>
+         :root {
+            --important-c: #ffa4a4;
+        }
+        
         .navbar {
             margin: 0px;
             padding: 0px;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 1;
         }
         
         .navbar-nav li {
@@ -42,14 +50,6 @@
             font-family: kiwi-m;
             font-weight: bold;
         }
-        /* .navbar-nav {
-            background-color: white;
-        }
-        
-        .navbar-nav a {
-            color: black;
-        }
-         */
         
         .nav-link:active {
             color: #0d57aa;
@@ -75,7 +75,7 @@
         
         .left-cont .cont:nth-child(1),
         .left-cont .cont:nth-child(2) {
-            background-color: #ffa4a4;
+            background-color: var(--important-c);
             color: white;
             font-family: "kiwi-r";
             font-weight: 900;
@@ -90,10 +90,12 @@
             color: white;
         }
         
-        .navbra-nav .nav-item .nav-link {}
-        
         a {
             color: rgb(63, 62, 62);
+        }
+        
+        .important-c {
+            color: var(--important-c);
         }
         
         .active {
@@ -129,30 +131,114 @@
             padding-left: 50px;
         }
         
-        .mainTexy {
+        .mainText {
             color: #2d6099;
             font-family: kiwi-l;
             font-weight: bold;
+            font-size: 44px;
+        }
+        
+        .mainText-body {
+            padding-top: 15px;
+            font-size: 30px;
+            margin-bottom: 30px;
+            line-height: 1.39;
+            color: #4a4a4a;
         }
         
         .footer-navbar {
-            position: static;
-            display: block;
+            position: sticky;
+            bottom: 0px;
             height: 100px;
             width: 100%;
             background-color: #2d6099;
-            bottom: 0px;
-            top: 0;
+        }
+        
+        .footer-navbar .container button {
+            float: right;
+            background-color: var(--important-c);
+            vertical-align: middle;
+            height: fit-content;
+            color: white;
+            border-color: transparent;
+            font-size: 20px;
+            padding: 10px 50px;
+            border-radius: 30px;
+        }
+        
+        .footer-navbar .container p {
+            float: left;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .footer-navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .home-info-list .list-group .list-group-item {
+            border: none;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: #042232;
+            background-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .container .row:nth-child(1) .list-item-container {
+            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+            background-image: url("image/cicle-bg.svg");
+            background-size: 330px;
+            background-repeat: no-repeat;
+            background-position-x: 140%;
+            background-position-y: -20px;
+            box-shadow: rgb(226, 226, 226) 2px 3px 7px;
+            border-radius: 7px;
+            padding: 20px 0px;
         }
         
         .mt-55 {
-            margin-top: 200px;
+            margin-top: 300px;
+        }
+        
+        .small-icon {
+            width: 30px;
+        }
+        
+        .list-group-item .small-icon {
+            margin-right: 20px;
+            transition: all 0.5s ease;
+        }
+        
+        .list-group-item:nth-child(4) .small-icon:hover {
+            transform: rotate(90deg);
+        }
+        
+        .home-info-title {
+            margin-left: 20px;
+            font-size: 25px;
+            margin-bottom: 15px;
+            font-family: brand-font-normal;
+            font-weight: 600;
         }
         
         @media (max-width: 1599px) {
+            .mainText,
+            .mainText-body {
+                text-align: center;
+            }
             .navbar {
                 background-color: #2d6099;
             }
+        }
+        
+        @media (min-width: 1599px) {
+            .container {}
         }
     </style>
     <title>Document</title>
@@ -183,9 +269,6 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">WORK</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">WORK</a>
-                </li>
             </ul>
             <div class="left-cont">
                 <div class="cont"> <span><img class="icon" src="icons/Phone_50px.png" alt="phone icon"></span><span class="bi bi-telephone-outbound-fill"></span><span class="phoneN"> +251921577930 </span></div>
@@ -193,20 +276,31 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid" style="max-width: 1550px;">
-        <div class="row mt-55">
+    <div class="container">
+        <div class="row mt-55 align-items-center">
             <div class="col-xl-7">
-                <h1 class="display-5 mainTexy">Agencies and designers, we are your on-demand web developer</h1>
-                <p class="text-muted">Based in Canberra Australia, our team provides white labelled, first-class development so you can focus on design, creative, and other vital parts of your web project.</p>
+                <h1 class=" mainText">Agencies and designers, we are your on-demand web developer</h1>
+                <p class="mainText-body">Based in Canberra Australia, our team provides <span class="important-c">white labelled, first-class development</span> so you can focus on design, creative, and other vital parts of your web project.</p>
             </div>
-            <div class="col-xl-5">
-
-                this is
+            <div class="col-xl-5 list-item-container">
+                <div class="home-info-title text-muted">We rock:</div>
+                <div class="home-info-list">
+                    <ul class="list-group">
+                        <li class="list-group-item"><span><img class="small-icon" src="icons/Html 5_48px.png" alt=""></span> PSD/XD/SKETCH to HTML</li>
+                        <li class="list-group-item"><span><img class="small-icon" src="icons/WordPress_50px.png" alt=""></span> PSD/XD/SKETCH to WordPress</li>
+                        <li class="list-group-item"><span><img class="small-icon" src="icons/Mail_50px.png" alt=""></span> PSD/XD/SKETCH TO EMAIL</li>
+                        <li class="list-group-item"><span><img class="small-icon" src="icons/Support_48px.png" alt=""></span> WEBSITE SUPPORT & MAINTENANCE</li>
+                        <li class="list-group-item"><span><img class="small-icon" src="icons/Money Bag_48px.png" alt=""></span> CRAFTCMS & SHOPIFY DEVELOPMENT</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <div class="footer-navbar">
-        this is footer navbar
+        <div class="container">
+            <p> We use cookies on our website to help improve your experience. By continuing to use this site you consent to the use of cookies.</p>
+            <button type="button footer-button" class="btn btn-warning">gotch!</button>
+        </div>
     </div>
     <script src="JQuery-3.6.0/jquery-3.6.0.js"></script>
     <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.js"></script>
